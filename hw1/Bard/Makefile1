@@ -1,0 +1,23 @@
+CXX = g++
+CXXFLAGS = -Wall -std=c++11 
+
+OBJECTS = LinkedList.o VocabList.o BardTester.o
+
+BardTester: $(OBJECTS)
+	$(CXX) -g $(CXXFLAGS) -o BardTester LinkedList.o VocabList.o BardTester.o
+
+LinkedList.o: LinkedList.cpp LinkedList.h
+	$(CXX) -g $(CXXFLAGS) -c LinkedList.cpp
+	
+VocabList.o: LinkedList.cpp LinkedList.h VocabList.cpp VocabList.h
+	$(CXX) -g $(CXXFLAGS) -c VocabList.cpp
+
+BardTester.o: LinkedList.cpp LinkedList.h VocabList.cpp VocabList.h BardTester.cpp
+	$(CXX) -g $(CXXFLAGS) -c BardTester.cpp
+
+clean: 
+	rm -f *.o
+	rm BardTester
+	
+format:
+	clang-format -i LinkedList.cpp VocabList.cpp BardTester.cpp
