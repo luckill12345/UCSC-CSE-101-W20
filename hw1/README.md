@@ -3,6 +3,8 @@
 This assignment is on a word analysis of Shakespeare's texts. The main CS objective is to understand
 how to code and use linked lists.
 
+[Assignment README](/Bard/README.md)
+
 ### Assignment details
 
 Get a pdf of the assignment description from https://users.soe.ucsc.edu/~sesh/Teaching/2020/CSE101/HW/hw_shakespeare.pdf
