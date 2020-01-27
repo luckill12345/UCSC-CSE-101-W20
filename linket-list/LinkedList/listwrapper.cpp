@@ -83,6 +83,19 @@ int main(int argc, char **argv)
     //      output.close();
 
     LinkedList list;
+
+    list.deleteList();
+    list.insert(10);
+    list.insert(12);
+    list.insert(13);
+    list.insert(11);
+    list.insert(11);
+
+    cout << list.print() << endl;
+    cout << "isPalindrome: " << list.palindrome() << endl;
+    cout << list.print() << endl;
+
+    list.deleteList();
     list.insert(11);
     list.insert(12);
     list.insert(13);

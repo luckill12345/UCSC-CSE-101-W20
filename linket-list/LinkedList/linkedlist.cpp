@@ -155,33 +155,19 @@ void LinkedList::dedup()
     }
 }
 
-void palindrome(Node *init, Node *partner, int result)
+bool palindrome(Node *current, Node *&init)
 {
-    if (partner == NULL)
-        return;
-    ::palindrome(init, partner->next, result);
-    if (init->data != partner->data)
-    {
-        result = 1;
-    }
-    init = init->next;
-}
-
-bool palindrome(Node *init, Node *partner)
-{
-    if (partner == NULL)
+    if (current == NULL)
         return true;
-
-    bool result = ::palindrome(init, partner->next) && (init->data == partner->data);
+    if (!::palindrome(current->next, init))
+        return false;
+    Node *prev = init;
     init = init->next;
-    return result;
+    return (prev->data == current->data);
 }
 
 bool LinkedList::palindrome()
 {
-    // int result = 0;
-    // ::palindrome(this->head, this->head->next, result);
-    // return !result;
     return ::palindrome(this->head, this->head);
 }
 
