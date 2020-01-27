@@ -167,11 +167,22 @@ void palindrome(Node *init, Node *partner, int result)
     init = init->next;
 }
 
+bool palindrome(Node *init, Node *partner)
+{
+    if (partner == NULL)
+        return true;
+
+    bool result = ::palindrome(init, partner->next) && (init->data == partner->data);
+    init = init->next;
+    return result;
+}
+
 bool LinkedList::palindrome()
 {
-    int result = 0;
-    ::palindrome(this->head, this->head->next, result);
-    return !result;
+    // int result = 0;
+    // ::palindrome(this->head, this->head->next, result);
+    // return !result;
+    return ::palindrome(this->head, this->head);
 }
 
 Node *deletelast(int val, Node *current, Node *last)
@@ -199,7 +210,7 @@ Node *LinkedList::deletelast(int val)
 
 Node *getTail(Node *current)
 {
-    if (current->next == NULL)
+    if (current->next->next == NULL)
     {
         return current;
     }
