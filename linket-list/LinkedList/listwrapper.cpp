@@ -137,9 +137,20 @@ int main(int argc, char **argv)
     list.insert(19);
     list.insert(18);
 
+    cout << "Reverse:\n"
+         << list.print() << endl;
+    list.reverse(1);
+
+    cout << list.print() << endl;
+    list.reverse(2);
+
     cout << list.print() << endl;
     list.reverse(3);
     cout << list.print() << endl;
 
+    list.reverse(4);
+    cout << list.print() << endl;
+    list.reverse(5);
+    cout << list.print() << endl;
     return 0;
 }

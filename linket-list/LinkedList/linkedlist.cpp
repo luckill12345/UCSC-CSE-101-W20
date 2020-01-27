@@ -216,13 +216,27 @@ void LinkedList::rotate(int factor)
     }
 }
 
+Node *getTail1(Node *current)
+{
+    if (current == NULL)
+    {
+        return current;
+    }
+    return ::getTail1(current->next);
+}
+
 // Given a non-negative int argument (say, val), this function reverses the
 // order of the first val elements of the list, and leaves the others unchanged.
 void LinkedList::reverse(int factor)
 {
     Node *temp, *current = this->head, *prev = NULL, *next = NULL;
+    int count = 1;
+
+    if (factor == 1)
+        return;
     while (current != NULL && factor > 1)
     {
+
         current = current->next;
         factor--;
     }
@@ -232,6 +246,7 @@ void LinkedList::reverse(int factor)
     current = this->head;
     while (current != NULL)
     {
+
         next = current->next;
         current->next = prev;
         prev = current;
@@ -239,6 +254,8 @@ void LinkedList::reverse(int factor)
     }
     this->head = prev;
 
-    Node *tail = ::getTail(this->head);
-    tail->next->next = temp;
+    Node *tail = head;
+    while (tail->next != NULL)
+        tail = tail->next;
+    tail->next = temp;
 }
