@@ -188,7 +188,7 @@ List stretch(string input, int k)
     stack<class Pair> Stack;
     Pair init, stacktop;
     init.in_str = input;
-    init.fixed_str = "abc";
+    init.fixed_str = input;
     Stack.push(init);
     int n = input.length();
 
@@ -215,7 +215,7 @@ List stretch(string input, int k)
             Stack.push(to_push);
 
             to_push.fixed_str = stacktop.fixed_str.substr(0, stacktop.fixed_str.find(tgt)) + tgt + stacktop.fixed_str.substr(stacktop.fixed_str.find(tgt), stacktop.fixed_str.length());
-            to_push.k = stacktop.k;
+            to_push.k = stacktop.k + 1;
             Stack.push(to_push);
         }
     }
@@ -265,7 +265,7 @@ int main(int argc, char **argv)
 
     lang.deleteList(); // free all the memory of this list
 
-    List strch = stretch(in_str, 3); // initializing the linked list
+    List strch = stretch(in_str, 5); // initializing the linked list
 
     strch.sort(); // sort the list
 
