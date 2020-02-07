@@ -34,21 +34,15 @@ Board solve(Board init)
         }
         int row = 0;
         while (stacktop.hasQueen(row + 1))
-        {
-            // cout << "Row: " << row + 1 << endl;
             row++;
-        }
+
         for (int i = 0; i < stacktop.size; i++)
-        {
             if (stacktop.isValid(row + 1, i + 1))
             {
-                // cout << "pushRow: " << row + 1 << endl;
-                // cout << "pushCol: " << i + 1 << endl;
                 Board temp = stacktop;
                 temp.placeQueen(row + 1, i + 1);
                 BoardState.push(temp);
             }
-        }
     }
     return final;
 }
@@ -86,10 +80,8 @@ int main(int argc, char const *argv[])
         int num;
         vector<int> nums;
         while (iss >> num)
-        {
-            // cout << "|" << num << "|" << endl;
             nums.push_back(num);
-        }
+
         log << "***********************************************************" << endl;
         log << "Board Size: " << nums[0] << endl;
         int x, y;
@@ -107,7 +99,6 @@ int main(int argc, char const *argv[])
             else
             {
                 y = nums[i];
-                // cout << "|" << x << "," << y << "|" << endl;
                 init.placeQueen(x, y, true);
                 pair = false;
             }

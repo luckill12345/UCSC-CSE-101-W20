@@ -41,8 +41,6 @@ bool Board::hasQueen(int row)
     {
         if (board[i].getRow() == row)
         {
-            // cout << "has Queen Row: " << row << endl;
-            // cout << "Curr Queen Row: " << board[i].getRow() << endl;
             return true;
         }
     }
@@ -70,9 +68,8 @@ string Board::print()
 {
     stringstream temp;
     for (int i = 0; i < (int)board.size(); i++)
-    {
         temp << "(" << board[i].getRow() << "," << board[i].getCol() << ") ";
-    }
+
     temp << endl;
     return temp.str();
 }
@@ -81,11 +78,8 @@ string Board::print_toFile()
 {
     stringstream temp;
     for (int i = 0; i < (int)board.size(); i++)
-    {
-        // output << board[i].getRow() << " " << board[i].getCol() << ' ';
         temp << board[i].getRow() << " " << board[i].getCol() << ' ';
-    }
-    // output << " \n";
+
     temp << endl;
     return temp.str();
 }
