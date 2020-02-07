@@ -30,7 +30,7 @@ Board solve(Board init)
         if (stacktop.isComplete() && stacktop.isValid())
         {
             final = stacktop;
-            continue;
+            break;
         }
         int row = 0;
         while (stacktop.hasQueen(row + 1))

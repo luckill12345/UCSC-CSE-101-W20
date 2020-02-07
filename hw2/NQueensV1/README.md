@@ -7,9 +7,7 @@
   Course: CSE 101
 
   [Assignment Document](../nqueens.pdf)
-  [Easier to Follow Version](../NQueensV1/README.md)
-
-  **Disclaimer:** This code solves the board in microseconds but if line 33 in **nqueens.cpp** is changed from "break;" to "continue;" the resulting boards are solved going from left to right instead of right to left if "break;" is left unchanged.
+  [More Efficient Version](../NQueens/README.md)
 
   ### Description
 

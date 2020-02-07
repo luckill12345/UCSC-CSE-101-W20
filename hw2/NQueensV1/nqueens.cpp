@@ -65,7 +65,7 @@ Board solve(Board init)
             // stacktop.print();
             // cout << "----------------------------------" << endl;
             final = stacktop;
-            continue;
+            break;
         }
         for (int i = 0; i < stacktop.size; i++)
         {
@@ -111,7 +111,7 @@ Board solve(Board init)
                         pushed = true;
                         stacktop.removeQueen(i + 1);
                     }
-                    if (j == stacktop.size)
+                    if (j + 1 == stacktop.size)
                     {
                         // cout << "yeet" << endl;
                         endrow = true;
