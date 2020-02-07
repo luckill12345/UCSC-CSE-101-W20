@@ -70,6 +70,7 @@ int main(int argc, char const *argv[])
         exit(EXIT_FAILURE);
     }
     string temp;
+    auto starttotal = high_resolution_clock::now();
     while (!in.eof())
     {
         getline(in, temp);
@@ -104,8 +105,7 @@ int main(int argc, char const *argv[])
             }
         }
 
-        log << "Initial Board: ";
-        init.print();
+        log << "Initial Board: " << init.print();
         auto start = high_resolution_clock::now();
         Board temp = solve(init);
         auto stop = high_resolution_clock::now();
@@ -151,6 +151,14 @@ int main(int argc, char const *argv[])
         }
         log << "***********************************************************" << endl;
     }
+    auto stoptotal = high_resolution_clock::now();
+
+    auto durationstotal = duration_cast<seconds>(stoptotal - starttotal);
+    auto durationmstotal = duration_cast<milliseconds>(stoptotal - starttotal);
+    auto durationustotal = duration_cast<microseconds>(stoptotal - starttotal);
+    log << "Total Time to execute: " << durationstotal.count() << " seconds or "
+        << durationmstotal.count() << " milliseconds or " << durationustotal.count() << " microseconds" << endl;
+    log << "***********************************************************" << endl;
     in.close();
     out.close();
 }
