@@ -4,7 +4,7 @@
   Due Date: 24-01-19
   Author: Baladithya Balamurugan
   UCID: bbalamur
-  Course: AM 10
+  Course: CSE 101
 
   [Assignment Document](../hw_shakespeare.pdf)
 
@@ -39,8 +39,8 @@
   * Contains 2 attributes: an array of type **LinkedList** and the size of aforementioned array
 
   **VocabList.h**
-  * The header file for VocabList.cpp
-  * A pipeline to connect Bard.cpp to VocabList.cpp
+  * The header file for **VocabList.cpp**
+  * A pipeline to connect **Bard.cpp** to **VocabList.cpp**
 
   **LinkedList.cpp**
   * The **LinkedList** ADT/Class ==> a **LinkedList** data type with supporting functions needed to run
@@ -48,13 +48,13 @@
   * **Node** data type ==> Contains 3 attributes: a string containind the word, the frequesncy of said word that has appeared, and a **Node** pointer (for obvious reasons)
 
   **LinkedList.h**
-  * The header file for LinkedList.cpp
-  * A pipeline to connect VocabList.cpp to LinkedList.cpp
+  * The header file for **LinkedList.cpp**
+  * A pipeline to connect **VocabList.cpp** to **LinkedList.cpp**
 
   **README.md**
   * The current file you are reading that describes the assignment and the relevant files in parent directory
 
-  ##Other Files##
+  ### Other Files
 
   **BardTester.cpp**
   * A file that compiles to executable and takes in 2 arguments and parses **shakespeare-cleaned5.txt**
