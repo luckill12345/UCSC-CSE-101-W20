@@ -1,86 +1,94 @@
 ***********************************************************
 Board Size: 5
 Initial Board: (1,1) 
-Time to solve: 0 seconds or 0 milliseconds or 34 microseconds
-Final Board: Time to sort: 0 seconds or 0 milliseconds or 5 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 25 microseconds
+Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
 (1,1) (2,4) (3,2) (4,5) (5,3) 
-Time to convert to string: 0 seconds or 0 milliseconds or 6 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 4 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 5
 Initial Board: (1,2) 
-Time to solve: 0 seconds or 0 milliseconds or 17 microseconds
-Final Board: Time to sort: 0 seconds or 0 milliseconds or 3 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 15 microseconds
+Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
 (1,2) (2,5) (3,3) (4,1) (5,4) 
-Time to convert to string: 0 seconds or 0 milliseconds or 4 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 3 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 5
 Initial Board: (1,3) 
-Time to solve: 0 seconds or 0 milliseconds or 16 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 13 microseconds
 Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
 (1,3) (2,5) (3,2) (4,4) (5,1) 
-Time to convert to string: 0 seconds or 0 milliseconds or 4 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 3 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 5
 Initial Board: (1,4) 
-Time to solve: 0 seconds or 0 milliseconds or 15 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 19 microseconds
 Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
 (1,4) (2,2) (3,5) (4,3) (5,1) 
-Time to convert to string: 0 seconds or 0 milliseconds or 5 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 3 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 5
 Initial Board: (1,5) 
-Time to solve: 0 seconds or 0 milliseconds or 15 microseconds
-Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 14 microseconds
+Final Board: Time to sort: 0 seconds or 0 milliseconds or 1 microseconds
 (1,5) (2,3) (3,1) (4,4) (5,2) 
-Time to convert to string: 0 seconds or 0 milliseconds or 4 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 3 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 6
 Initial Board: (1,1) 
-Time to solve: 0 seconds or 0 milliseconds or 49 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 50 microseconds
 No solution
 ***********************************************************
 ***********************************************************
 Board Size: 6
 Initial Board: (1,2) 
-Time to solve: 0 seconds or 0 milliseconds or 63 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 61 microseconds
 Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
 (1,2) (2,4) (3,6) (4,1) (5,3) (6,5) 
-Time to convert to string: 0 seconds or 0 milliseconds or 4 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 3 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 6
 Initial Board: (1,3) 
-Time to solve: 0 seconds or 0 milliseconds or 49 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 27 microseconds
 Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
 (1,3) (2,6) (3,2) (4,5) (5,1) (6,4) 
-Time to convert to string: 0 seconds or 0 milliseconds or 7 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 3 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 6
 Initial Board: (1,4) 
-Time to solve: 0 seconds or 0 milliseconds or 58 microseconds
-Final Board: Time to sort: 0 seconds or 0 milliseconds or 4 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 45 microseconds
+Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
 (1,4) (2,1) (3,5) (4,2) (5,6) (6,3) 
-Time to convert to string: 0 seconds or 0 milliseconds or 8 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 3 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 6
 Initial Board: (1,5) 
-Time to solve: 0 seconds or 0 milliseconds or 38 microseconds
-Final Board: Time to sort: 0 seconds or 0 milliseconds or 5 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 23 microseconds
+Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
 (1,5) (2,3) (3,1) (4,6) (5,4) (6,2) 
-Time to convert to string: 0 seconds or 0 milliseconds or 4 microseconds
+Time to convert to string: 0 seconds or 0 milliseconds or 2 microseconds
 ***********************************************************
 ***********************************************************
 Board Size: 6
 Initial Board: (1,6) 
-Time to solve: 0 seconds or 0 milliseconds or 56 microseconds
+Time to solve: 0 seconds or 0 milliseconds or 47 microseconds
 No solution
 ***********************************************************
-Total Time to execute: 0 seconds or 7 milliseconds or 7169 microseconds
+***********************************************************
+Board Size: 11
+Initial Board: (1,5) (2,2) (3,6) (4,1) (5,10) (6,4) (7,9) (8,3) (9,8) (10,11) (11,7) 
+Time to solve: 0 seconds or 0 milliseconds or 1 microseconds
+Final Board: Time to sort: 0 seconds or 0 milliseconds or 2 microseconds
+(1,5) (2,2) (3,6) (4,1) (5,10) (6,4) (7,9) (8,3) (9,8) (10,11) (11,7) 
+Time to convert to string: 0 seconds or 0 milliseconds or 5 microseconds
+***********************************************************
+Total Time to execute: 0 seconds or 2 milliseconds or 2239 microseconds
 ***********************************************************

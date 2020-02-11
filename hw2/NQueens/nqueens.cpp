@@ -106,28 +106,21 @@ int main(int argc, char const *argv[])
         }
 
         log << "Initial Board: " << init.print();
-        auto start = high_resolution_clock::now();
-        Board temp = solve(init);
-        auto stop = high_resolution_clock::now();
-
-        auto durations = duration_cast<seconds>(stop - start);
-        auto durationms = duration_cast<milliseconds>(stop - start);
-        auto durationus = duration_cast<microseconds>(stop - start);
-
-        log << "Time to solve: " << durations.count() << " seconds or "
-            << durationms.count() << " milliseconds or " << durationus.count() << " microseconds" << endl;
-
-        if (temp.numQueens == init.numQueens)
+        if (init.isComplete() && init.isValid())
         {
-            log << "No solution" << endl;
-            out << "No solution" << endl;
-        }
-        else
-        {
+            auto start = high_resolution_clock::now();
+            auto stop = high_resolution_clock::now();
+
+            auto durations = duration_cast<seconds>(stop - start);
+            auto durationms = duration_cast<milliseconds>(stop - start);
+            auto durationus = duration_cast<microseconds>(stop - start);
+
+            log << "Time to solve: " << durations.count() << " seconds or "
+                << durationms.count() << " milliseconds or " << durationus.count() << " microseconds" << endl;
             log << "Final Board: ";
 
             auto startsort = high_resolution_clock::now();
-            sort(temp.board.begin(), temp.board.end(), &comparator);
+            sort(init.board.begin(), init.board.end(), &comparator);
             auto stopsort = high_resolution_clock::now();
 
             auto durationssort = duration_cast<seconds>(stopsort - startsort);
@@ -137,9 +130,9 @@ int main(int argc, char const *argv[])
             log << "Time to sort: " << durationssort.count() << " seconds or "
                 << durationmssort.count() << " milliseconds or " << durationussort.count() << " microseconds" << endl;
 
-            log << temp.print();
+            log << init.print();
             auto startstring = high_resolution_clock::now();
-            out << temp.print_toFile();
+            out << init.print_toFile();
             auto stopstring = high_resolution_clock::now();
 
             auto durationsstring = duration_cast<seconds>(stopstring - startstring);
@@ -149,6 +142,53 @@ int main(int argc, char const *argv[])
             log << "Time to convert to string: " << durationsstring.count() << " seconds or "
                 << durationmsstring.count() << " milliseconds or " << durationusstring.count() << " microseconds" << endl;
         }
+        else
+        {
+            auto start = high_resolution_clock::now();
+            Board temp = solve(init);
+            auto stop = high_resolution_clock::now();
+
+            auto durations = duration_cast<seconds>(stop - start);
+            auto durationms = duration_cast<milliseconds>(stop - start);
+            auto durationus = duration_cast<microseconds>(stop - start);
+
+            log << "Time to solve: " << durations.count() << " seconds or "
+                << durationms.count() << " milliseconds or " << durationus.count() << " microseconds" << endl;
+
+            if (temp.numQueens == init.numQueens)
+            {
+                log << "No solution" << endl;
+                out << "No solution" << endl;
+            }
+            else
+            {
+                log << "Final Board: ";
+
+                auto startsort = high_resolution_clock::now();
+                sort(temp.board.begin(), temp.board.end(), &comparator);
+                auto stopsort = high_resolution_clock::now();
+
+                auto durationssort = duration_cast<seconds>(stopsort - startsort);
+                auto durationmssort = duration_cast<milliseconds>(stopsort - startsort);
+                auto durationussort = duration_cast<microseconds>(stopsort - startsort);
+
+                log << "Time to sort: " << durationssort.count() << " seconds or "
+                    << durationmssort.count() << " milliseconds or " << durationussort.count() << " microseconds" << endl;
+
+                log << temp.print();
+                auto startstring = high_resolution_clock::now();
+                out << temp.print_toFile();
+                auto stopstring = high_resolution_clock::now();
+
+                auto durationsstring = duration_cast<seconds>(stopstring - startstring);
+                auto durationmsstring = duration_cast<milliseconds>(stopstring - startstring);
+                auto durationusstring = duration_cast<microseconds>(stopstring - startstring);
+
+                log << "Time to convert to string: " << durationsstring.count() << " seconds or "
+                    << durationmsstring.count() << " milliseconds or " << durationusstring.count() << " microseconds" << endl;
+            }
+        }
+
         log << "***********************************************************" << endl;
     }
     auto stoptotal = high_resolution_clock::now();
