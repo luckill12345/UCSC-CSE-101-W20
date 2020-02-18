@@ -315,10 +315,42 @@ Node *BST::lca(int num1, int num2)
 
 int width(Node *current, int lvl)
 {
-    if (current->left == NULL || current->right == NULL)
-        return lvl;
-    int leastlvl = width(current->left, lvl + 1) < width(current->right, lvl + 1) ? width(current->left, lvl + 1) : width(current->right, lvl + 1);
-    return leastlvl;
+    // if (current->left == NULL || current->right == NULL)
+    //     return lvl;
+    // int leastlvl = width(current->left, lvl + 1) < width(current->right, lvl + 1) ? width(current->left, lvl + 1) : width(current->right, lvl + 1);
+    // return leastlvl;
+
+    if (current == NULL)
+        return 0;
+    if (lvl == 1)
+        return 1;
+
+    return width(current->left, lvl - 1) +
+           width(current->right, lvl - 1);
 }
 
-int BST::width() { return ::width(root, 0); }
+int height(Node *current)
+{
+    if (current == NULL)
+        return 0;
+
+    if (height(current->left) < height(current->right))
+        return height(current->left) + 1;
+    else
+        return height(current->right) + 1;
+}
+
+int BST::width()
+{
+    int height = ::height(root);
+    cout << height << endl;
+    int maxwidth = -1;
+    for (int i = 0; i <= height + 1; i++)
+    {
+        if (::width(root, i) >= maxwidth)
+        {
+            maxwidth = ::width(root, i);
+        }
+    }
+    return maxwidth;
+}

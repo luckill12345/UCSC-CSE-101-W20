@@ -126,6 +126,13 @@ int main(int argc, char **argv)
     // temp.insert(62);
     // temp.insert(68);
 
+    // temp.insert(4);
+    // temp.insert(3);
+    // temp.insert(6);
+    // temp.insert(2);
+    // temp.insert(7);
+    // temp.insert(5);
+
     // cout << temp.printInOrder() << endl;
 
     // Node *tempNode = temp.lca(31, 40);
