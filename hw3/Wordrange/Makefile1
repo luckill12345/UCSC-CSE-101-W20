@@ -1,0 +1,11 @@
+CXX = g++
+CXXFLAGS = -Wall -std=c++11
+
+OBJECTS = AVL.o AVLTester.o
+
+AVLTester: $(OBJECTS)
+	$(CXX) -g $(CXXFLAGS) -o $@ $^
+
+clean: 
+	rm -f *.o AVLTester
+$(OBJECTS): AVL.h
