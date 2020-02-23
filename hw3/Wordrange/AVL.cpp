@@ -95,6 +95,18 @@ Node *balance(Node *current)
     return current;
 }
 
+bool find(Node *current, string val)
+{
+    if (current == NULL)
+        return 0;
+    if (current->key == val)
+        return 1;
+    if (val < current->key)
+        return find(current->left, val);
+    else
+        return find(current->right, val);
+}
+
 Node *insert(Node *current, string val)
 {
     if (current == NULL)
@@ -116,8 +128,10 @@ Node *insert(Node *current, string val)
 
 void AVL::insert(string val)
 {
-    // cout << "Inserting " << val << endl;
-    root = ::insert(root, val);
+    if (!::find(root, val))
+        root = ::insert(root, val);
+    else
+        cout << val << " already exists..." << endl;
 }
 
 void printLvl(Node *current, int lvl)

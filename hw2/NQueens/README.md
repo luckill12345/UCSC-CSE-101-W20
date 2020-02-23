@@ -20,8 +20,6 @@
   The resulting executable needs to take 2 arguments inf the form:
       **./nqueens [input.txt] [output.txt]**
       
-  This file will run succesfully if the **shakespeare-cleaned5.txt** file exists in the same directory and if the **in** file formatting is correct as specified below.
-
   **input.txt** format:
 
     <board size int> <row int of queen> <column int of queen> ... <row int of queen> <column int of queen>

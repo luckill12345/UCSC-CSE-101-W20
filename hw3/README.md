@@ -10,7 +10,7 @@ Get a pdf of the assignment description from https://users.soe.ucsc.edu/~sesh/Te
 Here are the relevant files and directories.
 
 **Wordrange/**: This folder contains the files for your submission. You must write your code in this folder. Your Makefile
-must be in this directory, and should create the executable ``bard" in this directory. Here is a description of files
+must be in this directory, and should create the executable ``wordrange" in this directory. Here is a description of files
 within this directory.
 
 * simple-input.txt, simple-output.txt: These are test input files, to check your code. Please leave these files in this directory.
