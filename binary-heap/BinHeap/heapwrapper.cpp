@@ -84,11 +84,11 @@ int main(int argc, char **argv)
         // --------------------------------------------------------------------------------------------------------------
         // CODE TO CALL EXTRACT MAX: Uncomment this, if you want to test your extract max
         // --------------------------------------------------------------------------------------------------------------
-        //         if(strcmp(op,"em") == 0) // delete from list
-        //         {
-        //             cout << "Extract max" << endl;
-        //             myHeap.extractMax();
-        //         }
+        if (strcmp(op, "em") == 0) // delete from list
+        {
+            cout << "Extract max" << endl;
+            myHeap.extractMax();
+        }
     }
     myHeap.deleteHeap(); // free the memory
 

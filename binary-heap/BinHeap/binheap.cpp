@@ -126,14 +126,10 @@ string BinHeap ::print()
     return heap_str;
 }
 
-// Recursive Heapify-down algorithm
-// the node at index i and its two direct children
-// violates the heap property
 void BinHeap::heapify_down(int i)
 {
-    // get left and right child of node at index i
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
+    int left = 2 * i;
+    int right = 2 * i + 1;
 
     int largest = i;
 
@@ -153,9 +149,10 @@ void BinHeap::heapify_down(int i)
 void BinHeap::extractMax()
 {
     heapify_down(1);
-    cout << "before extractMax " << print() << endl;
+    // cout << "before extractMax " << print() << endl;
     int root = A[1];
     A[1] = A[size];
+    // A[size] = root;
     size--;
     cout << print() << endl;
     heapify_down(1);
