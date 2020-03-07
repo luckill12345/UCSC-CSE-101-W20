@@ -1,7 +1,7 @@
   ### HW3: Life is all about balancec
 
-  nqueens.cpp
-  Due Date: 206-02-19
+  wordrange.cpp
+  Due Date: 26-02-19
   Author: Baladithya Balamurugan
   UCID: bbalamur
   Course: CSE 101
@@ -14,7 +14,7 @@
 
   In this assignment we were supposed to take a file input that contains two types of queries (inserting and ranging). Then using the queries execute them on a AVL Tree (Height Balancing Binary Search Tree). The assignment has 3 tiers of grading: 5 points if you make a binary search tree (BST) that inserts and ranges the entire tree, 7 points if the program can deal with 1 million operations a minute, and finally full credit if the program can handle 3 million operations in a minute.
 
-  The Test folders have 3 input files that follow these teirs respectively: [simple-input.txt](Tests/simple-input.txt), [allwords-basic.txt](Tests/allwords-basic.txt), and [allwords-more-range.txt](Tests/allwords-more-range.txt)
+  The Test folders have 3 input files that follow these tiers respectively: [simple-input.txt](Tests/simple-input.txt), [allwords-basic.txt](Tests/allwords-basic.txt), and [allwords-more-range.txt](Tests/allwords-more-range.txt)
 
   The resulting executable needs to take 2 arguments inf the form:
       **./wordrange [input.txt] [output.txt]**
