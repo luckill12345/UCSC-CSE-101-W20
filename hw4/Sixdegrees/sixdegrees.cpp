@@ -81,7 +81,7 @@ int main(int argc, char const **argv)
         if (args[0] == args[1])
             out << args[0];
         else if (!mygraph.exists(args[0], args[1]))
-            out << "Not Present";
+            out << "Not present";
         else
         {
             list<string> path = mygraph.shortestPath(args[0], args[1]);
@@ -96,7 +96,7 @@ int main(int argc, char const **argv)
                     count++;
                 }
             else
-                out << "Not Present";
+                out << "Not present";
         }
         out << endl;
     }
@@ -113,23 +113,3 @@ int main(int argc, char const **argv)
     out.close();
     log.close();
 }
-
-// mygraph.printMap();
-
-// list<string> path = mygraph.shortestPath("Brad_Pitt", "Tom_Cruise");
-
-// if (path.size() != 1)
-//     for (string pathElem : path)
-//         cout << pathElem << "||";
-// else
-//     cout << "Not Present";
-// cout << endl;
-
-// list<string> path2 = mygraph.shortestPath("Marilyn_Monroe", "Quentin_Tarantino");
-
-// if (path2.size() != 1)
-//     for (string pathElem : path2)
-//         cout << pathElem << "||";
-// else
-//     cout << "Not Present";
-// cout << endl;
