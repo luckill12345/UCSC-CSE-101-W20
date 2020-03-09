@@ -32,17 +32,17 @@ void Graph::insert(vector<string> data)
     }
 }
 
-bool Graph::BFS(list<string> *queue, unordered_map<string, bool> *visited, unordered_map<string, Coactor> *parent, string dest)
+bool Graph::BFS(queue<string> *queue, unordered_map<string, bool> *visited, unordered_map<string, Coactor> *parent, string dest)
 {
     string current = queue->front();
-    queue->pop_front();
+    queue->pop();
     for (Coactor ca : graph[current])
     {
         if (visited->at(ca.name) == false)
         {
             parent->insert(pair<string, Coactor>(ca.name, Coactor(current, ca.movie)));
             visited->at(ca.name) = true;
-            queue->push_back(ca.name);
+            queue->push(ca.name);
             if (ca.name == dest)
                 return true;
         }
@@ -70,13 +70,13 @@ list<string> Graph::shortestPath(string src, string dest)
 {
     unordered_map<string, bool> s_visited;
     unordered_map<string, Coactor> s_parent;
-    list<string> s_queue;
+    queue<string> s_queue;
     for (pair<string, list<Coactor>> pair : graph)
     {
         s_visited.insert(::pair<string, bool>(pair.first, false));
     }
 
-    s_queue.push_back(src);
+    s_queue.push(src);
     s_visited[src] = true;
 
     s_parent.insert(::pair<string, Coactor>(src, Coactor("", "")));

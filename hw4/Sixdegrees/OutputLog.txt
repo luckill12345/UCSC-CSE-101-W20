@@ -1,4 +1,2 @@
-Total Time to Insert Data: 4 seconds or 4425 milliseconds or 4425272 microseconds
-***********************************************************
-Total Time to Finish Queries: 9 seconds or 9944 milliseconds or 9944766 microseconds
+Total Time to Insert Data: 7 seconds or 7709 milliseconds or 7709542 microseconds
 ***********************************************************

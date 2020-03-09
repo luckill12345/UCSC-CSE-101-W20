@@ -5,6 +5,7 @@
 #include <iterator>
 #include <unordered_map>
 #include <list>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -39,7 +40,7 @@ public:
     Graph();
     void insert(vector<string>);
     list<string> shortestPath(string, string);
-    bool BFS(list<string> *, unordered_map<string, bool> *, unordered_map<string, Coactor> *, string);
+    bool BFS(queue<string> *, unordered_map<string, bool> *, unordered_map<string, Coactor> *, string);
     string intersect(unordered_map<string, bool> *, unordered_map<string, bool> *);
     list<string> getfinalPath(unordered_map<string, Coactor>, unordered_map<string, Coactor>, string, string, string);
     void printMap();

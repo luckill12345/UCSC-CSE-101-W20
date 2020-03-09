@@ -1,4 +1,4 @@
-  ### HW1: Much ado about linking
+  ### HW3: Six Degrees of Searching
 
   Bard.cpp
   Due Date: 11-03-19

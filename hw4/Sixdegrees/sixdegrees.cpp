@@ -78,10 +78,10 @@ int main(int argc, char const **argv)
         vector<string> args;
         while (iss >> arg)
             args.push_back(arg);
-        if (args[0] == args[1])
-            out << args[0];
-        else if (!mygraph.exists(args[0], args[1]))
+        if (!mygraph.exists(args[0], args[1]))
             out << "Not present";
+        else if (args[0] == args[1])
+            out << args[0];
         else
         {
             list<string> path = mygraph.shortestPath(args[0], args[1]);
