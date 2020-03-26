@@ -1,6 +1,6 @@
-  ### HW3: Six Degrees of Searching
+  ### HW4: Six Degrees of Searching
 
-  Bard.cpp
+  sixdegrees.cpp
   Due Date: 11-03-19
   Author: Baladithya Balamurugan
   UCID: bbalamur
